@@ -1,0 +1,1 @@
+mono src\Service\bin\Debug\Yobby.exe --gc=sgen
