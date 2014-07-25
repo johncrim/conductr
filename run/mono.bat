@@ -1,1 +1,1 @@
-mono src\Service\bin\Debug\Yobby.exe --gc=sgen
+mono src\Service\bin\Debug\Conductr.exe --gc=sgen

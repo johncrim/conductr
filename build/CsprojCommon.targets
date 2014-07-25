@@ -1,0 +1,66 @@
+<!--
+***********************************************************************************************
+CsprojCommon.targets
+
+This file provides common build functionality for the LogJam projects.  It needs to 
+be imported into csproj files using:
+
+	<Import Project="..\..\build\CsprojCommon.targets" />
+
+***********************************************************************************************
+-->
+
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" >
+
+	<!-- Standard shared settings for all projects. -->
+	<PropertyGroup>
+		<ReleaseVersion>0.5.0-alpha</ReleaseVersion>
+
+		<TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+		<!--  <VisualStudioVersion>12.0</VisualStudioVersion> Required for https://nuget.codeplex.com/workitem/3939 ?? -->
+		<FileAlignment>512</FileAlignment>
+		<CodeContractsAssemblyMode>1</CodeContractsAssemblyMode>
+
+		<BuildToolsDir>$(MSBuildThisFileDirectory)</BuildToolsDir>
+
+		<RunCodeAnalysis>false</RunCodeAnalysis>
+		<CodeContractsEnableRuntimeChecking>True</CodeContractsEnableRuntimeChecking>
+		<CodeContractsRuntimeOnlyPublicSurface>False</CodeContractsRuntimeOnlyPublicSurface>
+		<CodeContractsRuntimeThrowOnFailure>True</CodeContractsRuntimeThrowOnFailure>
+		<CodeContractsRuntimeCallSiteRequires>False</CodeContractsRuntimeCallSiteRequires>
+		<CodeContractsRuntimeSkipQuantifiers>False</CodeContractsRuntimeSkipQuantifiers>
+		<CodeContractsRunCodeAnalysis>False</CodeContractsRunCodeAnalysis>
+		<CodeContractsNonNullObligations>True</CodeContractsNonNullObligations>
+		<CodeContractsBoundsObligations>True</CodeContractsBoundsObligations>
+		<CodeContractsArithmeticObligations>False</CodeContractsArithmeticObligations>
+		<CodeContractsEnumObligations>False</CodeContractsEnumObligations>
+		<CodeContractsRedundantAssumptions>False</CodeContractsRedundantAssumptions>
+		<CodeContractsMissingPublicRequiresAsWarnings>True</CodeContractsMissingPublicRequiresAsWarnings>
+		<CodeContractsInferRequires>True</CodeContractsInferRequires>
+		<CodeContractsInferEnsures>False</CodeContractsInferEnsures>
+		<CodeContractsInferObjectInvariants>False</CodeContractsInferObjectInvariants>
+		<CodeContractsSuggestAssumptions>False</CodeContractsSuggestAssumptions>
+		<CodeContractsSuggestRequires>True</CodeContractsSuggestRequires>
+		<CodeContractsSuggestObjectInvariants>False</CodeContractsSuggestObjectInvariants>
+		<CodeContractsRunInBackground>True</CodeContractsRunInBackground>
+		<CodeContractsShowSquigglies>True</CodeContractsShowSquigglies>
+		<CodeContractsUseBaseLine>False</CodeContractsUseBaseLine>
+		<CodeContractsEmitXMLDocs>True</CodeContractsEmitXMLDocs>
+		<CodeContractsCustomRewriterAssembly />
+		<CodeContractsCustomRewriterClass />
+		<CodeContractsLibPaths />
+		<CodeContractsExtraRewriteOptions />
+		<CodeContractsExtraAnalysisOptions />
+		<CodeContractsSQLServerOption />
+		<CodeContractsBaseLineFile />
+		<CodeContractsCacheAnalysisResults>True</CodeContractsCacheAnalysisResults>
+		<CodeContractsFailBuildOnWarnings>False</CodeContractsFailBuildOnWarnings>
+		<CodeContractsRuntimeCheckingLevel>Full</CodeContractsRuntimeCheckingLevel>
+		<CodeContractsReferenceAssembly>Build</CodeContractsReferenceAssembly>
+		<CodeContractsAnalysisWarningLevel>0</CodeContractsAnalysisWarningLevel>
+	</PropertyGroup>
+	<PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+		<CodeContractsRuntimeCheckingLevel>ReleaseRequires</CodeContractsRuntimeCheckingLevel>
+	</PropertyGroup>
+
+</Project>
