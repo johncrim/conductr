@@ -57,6 +57,12 @@ namespace Conductr.Service.Startup
 			throw new InvalidOperationException("Could not find ./web directory by walking up from " + Environment.CurrentDirectory);
 		}
 
+		internal static bool IsRunningInMono()
+		{
+			var monoRuntimeType = Type.GetType ("Mono.Runtime");
+			return monoRuntimeType != null;
+		}
+
 		private static bool Initialize(string[] args)
 		{
 			// Default exit code: an error occurred

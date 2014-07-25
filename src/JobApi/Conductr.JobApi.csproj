@@ -9,6 +9,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Conductr.JobApi</RootNamespace>
     <AssemblyName>Conductr.JobApi</AssemblyName>
+    <ReleaseVersion>0.5.0-alpha</ReleaseVersion>
   </PropertyGroup>
   <Import Project="..\..\build\CsprojCommon.targets" />
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">

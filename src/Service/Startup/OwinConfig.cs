@@ -28,7 +28,10 @@ namespace Conductr.Service.Startup
 		public void Configuration(IAppBuilder appBuilder)
 		{
 			appBuilder.UseTracerLogging();
-			appBuilder.TraceExceptions(true, true);
+			if (!App.IsRunningInMono ()) 
+			{
+				appBuilder.TraceExceptions (false, true);
+			}
 			appBuilder.LogHttpRequests(true, false);
 
 			appBuilder.UseStaticFiles(new StaticFileOptions()
