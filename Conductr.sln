@@ -1,0 +1,53 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30501.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{249BB576-C450-43D3-8D50-8D9DED829DDE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Conductr.Service", "src\Service\Conductr.Service.csproj", "{86F02680-C36F-4C2E-B66E-90B7BEE7F825}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Conductr.JobApi", "src\JobApi\Conductr.JobApi.csproj", "{58385C77-EF0F-4629-A01C-CCDA9202E331}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "build", "build", "{8AAEA562-B88A-454D-8F2A-3277CEEC780C}"
+	ProjectSection(SolutionItems) = preProject
+		build\CsprojCommon.targets = build\CsprojCommon.targets
+		build\Version.cs = build\Version.cs
+		build\xUnit.targets = build\xUnit.targets
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{F71D8EB0-F3E0-4E0A-8B7A-EF3D466702AB}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{93FD5E62-8E4B-4BF0-8C66-288D4435EE83}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{86F02680-C36F-4C2E-B66E-90B7BEE7F825}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{86F02680-C36F-4C2E-B66E-90B7BEE7F825}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{86F02680-C36F-4C2E-B66E-90B7BEE7F825}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{86F02680-C36F-4C2E-B66E-90B7BEE7F825}.Release|Any CPU.Build.0 = Release|Any CPU
+		{58385C77-EF0F-4629-A01C-CCDA9202E331}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{58385C77-EF0F-4629-A01C-CCDA9202E331}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{58385C77-EF0F-4629-A01C-CCDA9202E331}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{58385C77-EF0F-4629-A01C-CCDA9202E331}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{86F02680-C36F-4C2E-B66E-90B7BEE7F825} = {249BB576-C450-43D3-8D50-8D9DED829DDE}
+		{58385C77-EF0F-4629-A01C-CCDA9202E331} = {249BB576-C450-43D3-8D50-8D9DED829DDE}
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = src\Service\Yobby.Service.csproj
+		version = 0.5.0-alpha
+		outputpath = bin
+	EndGlobalSection
+EndGlobal

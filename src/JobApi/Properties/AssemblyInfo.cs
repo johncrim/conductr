@@ -1,4 +1,4 @@
 ﻿using System.Reflection;
 
-[assembly: AssemblyTitle("Yobby.JobApi")]
+[assembly: AssemblyTitle("Conductr.JobApi")]
 [assembly: AssemblyDescription("API for loading, executing, and tracking jobs.")]
