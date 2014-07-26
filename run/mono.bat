@@ -1,1 +1,3 @@
-mono src\Service\bin\Debug\Conductr.exe --gc=sgen
+pushd src\Service
+mono bin\Debug\Conductr.exe --gc=sgen
+popd
